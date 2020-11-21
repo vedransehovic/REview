@@ -1,0 +1,504 @@
+  [1m[35m (10.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateApiV1States (20201118225930)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateApiV1States (20201118225930)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateApiV1States (20201118225930)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateApiV1States (20201118225930)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateApiV1States (20201118225930)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "api_v1_states" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "abbreviation" varchar, "tax_rate" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201118225930"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateApiV1Properties (20201118230444)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "api_v1_properties" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "address" varchar, "rent" integer, "photo" varchar, "paid" boolean, "expenses" integer, "state_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201118230444"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-11-18 23:18:54.256670"], ["updated_at", "2020-11-18 23:18:54.256670"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (7.9ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "tax_rate", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Alaska"], ["abbreviation", "AL"], ["tax_rate", 0], ["created_at", "2020-11-18 23:21:59.139396"], ["updated_at", "2020-11-18 23:21:59.139396"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.9ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alabama"], ["abbreviation", "AL"], ["created_at", "2020-11-18 23:24:03.741396"], ["updated_at", "2020-11-18 23:24:03.741396"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Arizona"], ["abbreviation", "AZ"], ["created_at", "2020-11-18 23:35:36.813047"], ["updated_at", "2020-11-18 23:35:36.813047"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Arkansas"], ["abbreviation", "AR"], ["created_at", "2020-11-18 23:35:36.820115"], ["updated_at", "2020-11-18 23:35:36.820115"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "California"], ["abbreviation", "CA"], ["created_at", "2020-11-18 23:35:36.826723"], ["updated_at", "2020-11-18 23:35:36.826723"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Colorado"], ["abbreviation", "CO"], ["created_at", "2020-11-18 23:35:36.833306"], ["updated_at", "2020-11-18 23:35:36.833306"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Connecticut"], ["abbreviation", "CT"], ["created_at", "2020-11-18 23:35:36.840617"], ["updated_at", "2020-11-18 23:35:36.840617"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Delaware"], ["abbreviation", "DE"], ["created_at", "2020-11-18 23:35:36.847607"], ["updated_at", "2020-11-18 23:35:36.847607"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "District of Columbia"], ["abbreviation", "DC"], ["created_at", "2020-11-18 23:35:36.854601"], ["updated_at", "2020-11-18 23:35:36.854601"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Florida"], ["abbreviation", "FL"], ["created_at", "2020-11-18 23:35:36.861419"], ["updated_at", "2020-11-18 23:35:36.861419"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Georgia"], ["abbreviation", "GA"], ["created_at", "2020-11-18 23:35:36.868205"], ["updated_at", "2020-11-18 23:35:36.868205"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Hawaii"], ["abbreviation", "HI"], ["created_at", "2020-11-18 23:35:36.874825"], ["updated_at", "2020-11-18 23:35:36.874825"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Idaho"], ["abbreviation", "ID"], ["created_at", "2020-11-18 23:35:36.881442"], ["updated_at", "2020-11-18 23:35:36.881442"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Illinois"], ["abbreviation", "IL"], ["created_at", "2020-11-18 23:35:36.888630"], ["updated_at", "2020-11-18 23:35:36.888630"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Indiana"], ["abbreviation", "IN"], ["created_at", "2020-11-18 23:35:36.895403"], ["updated_at", "2020-11-18 23:35:36.895403"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Iowa"], ["abbreviation", "IA"], ["created_at", "2020-11-18 23:35:36.902488"], ["updated_at", "2020-11-18 23:35:36.902488"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kansas"], ["abbreviation", "KS"], ["created_at", "2020-11-18 23:35:36.909203"], ["updated_at", "2020-11-18 23:35:36.909203"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kentucky"], ["abbreviation", "KY"], ["created_at", "2020-11-18 23:35:36.915783"], ["updated_at", "2020-11-18 23:35:36.915783"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.8ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Louisiana"], ["abbreviation", "LA"], ["created_at", "2020-11-18 23:35:36.923018"], ["updated_at", "2020-11-18 23:35:36.923018"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Maine"], ["abbreviation", "ME"], ["created_at", "2020-11-18 23:35:36.929794"], ["updated_at", "2020-11-18 23:35:36.929794"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Maryland"], ["abbreviation", "MD"], ["created_at", "2020-11-18 23:35:36.936729"], ["updated_at", "2020-11-18 23:35:36.936729"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Massachusetts"], ["abbreviation", "MA"], ["created_at", "2020-11-18 23:35:36.943681"], ["updated_at", "2020-11-18 23:35:36.943681"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Michigan"], ["abbreviation", "MI"], ["created_at", "2020-11-18 23:35:36.950526"], ["updated_at", "2020-11-18 23:35:36.950526"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Minnesota"], ["abbreviation", "MN"], ["created_at", "2020-11-18 23:35:36.964766"], ["updated_at", "2020-11-18 23:35:36.964766"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.8ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mississippi"], ["abbreviation", "MS"], ["created_at", "2020-11-18 23:35:36.971617"], ["updated_at", "2020-11-18 23:35:36.971617"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Missouri"], ["abbreviation", "MO"], ["created_at", "2020-11-18 23:35:36.978626"], ["updated_at", "2020-11-18 23:35:36.978626"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.8ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Montana"], ["abbreviation", "MT"], ["created_at", "2020-11-18 23:35:36.985451"], ["updated_at", "2020-11-18 23:35:36.985451"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nebraska"], ["abbreviation", "NE"], ["created_at", "2020-11-18 23:35:36.992366"], ["updated_at", "2020-11-18 23:35:36.992366"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nevada"], ["abbreviation", "NV"], ["created_at", "2020-11-18 23:35:36.999334"], ["updated_at", "2020-11-18 23:35:36.999334"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "New Hampshire"], ["abbreviation", "NH"], ["created_at", "2020-11-18 23:35:37.006076"], ["updated_at", "2020-11-18 23:35:37.006076"]]
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "New Jersey"], ["abbreviation", "NJ"], ["created_at", "2020-11-18 23:35:37.012594"], ["updated_at", "2020-11-18 23:35:37.012594"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "New Mexico"], ["abbreviation", "NM"], ["created_at", "2020-11-18 23:35:37.019479"], ["updated_at", "2020-11-18 23:35:37.019479"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "New York"], ["abbreviation", "NY"], ["created_at", "2020-11-18 23:35:37.026150"], ["updated_at", "2020-11-18 23:35:37.026150"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "North Carolina"], ["abbreviation", "NC"], ["created_at", "2020-11-18 23:35:37.033159"], ["updated_at", "2020-11-18 23:35:37.033159"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "North Dakota"], ["abbreviation", "ND"], ["created_at", "2020-11-18 23:35:37.040477"], ["updated_at", "2020-11-18 23:35:37.040477"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ohio"], ["abbreviation", "OH"], ["created_at", "2020-11-18 23:35:37.046904"], ["updated_at", "2020-11-18 23:35:37.046904"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Oklahoma"], ["abbreviation", "OK"], ["created_at", "2020-11-18 23:35:37.053567"], ["updated_at", "2020-11-18 23:35:37.053567"]]
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Oregon"], ["abbreviation", "OR"], ["created_at", "2020-11-18 23:35:37.060051"], ["updated_at", "2020-11-18 23:35:37.060051"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pennsylvania"], ["abbreviation", "PA"], ["created_at", "2020-11-18 23:35:37.067143"], ["updated_at", "2020-11-18 23:35:37.067143"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.8ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Rhode Island"], ["abbreviation", "RI"], ["created_at", "2020-11-18 23:35:37.074426"], ["updated_at", "2020-11-18 23:35:37.074426"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "South Carolina"], ["abbreviation", "SC"], ["created_at", "2020-11-18 23:35:37.081771"], ["updated_at", "2020-11-18 23:35:37.081771"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.8ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "South Dakota"], ["abbreviation", "SD"], ["created_at", "2020-11-18 23:35:37.089368"], ["updated_at", "2020-11-18 23:35:37.089368"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tennessee"], ["abbreviation", "TN"], ["created_at", "2020-11-18 23:35:37.096254"], ["updated_at", "2020-11-18 23:35:37.096254"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Texas"], ["abbreviation", "TX"], ["created_at", "2020-11-18 23:35:37.103318"], ["updated_at", "2020-11-18 23:35:37.103318"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Utah"], ["abbreviation", "UT"], ["created_at", "2020-11-18 23:35:37.110443"], ["updated_at", "2020-11-18 23:35:37.110443"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Vermont"], ["abbreviation", "VT"], ["created_at", "2020-11-18 23:35:37.117666"], ["updated_at", "2020-11-18 23:35:37.117666"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Virginia"], ["abbreviation", "VA"], ["created_at", "2020-11-18 23:35:37.125577"], ["updated_at", "2020-11-18 23:35:37.125577"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.7ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "West Virginia"], ["abbreviation", "WA"], ["created_at", "2020-11-18 23:35:37.132978"], ["updated_at", "2020-11-18 23:35:37.132978"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.6ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Wisconsin"], ["abbreviation", "WV"], ["created_at", "2020-11-18 23:35:37.140120"], ["updated_at", "2020-11-18 23:35:37.140120"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Create (0.9ms)[0m  [1m[32mINSERT INTO "api_v1_states" ("name", "abbreviation", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Wyoming"], ["abbreviation", "WI"], ["created_at", "2020-11-18 23:35:37.147563"], ["updated_at", "2020-11-18 23:35:37.147563"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."abbreviation" = ? LIMIT ?[0m  [["abbreviation", "NY"], ["LIMIT", 11]]
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."abbreviation" = ? LIMIT ?[0m  [["abbreviation", "NY"], ["LIMIT", 11]]
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" ORDER BY "api_v1_states"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (8.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mApi::V1::Property Load (0.4ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mApi::V1::State Load (0.1ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[36mApi::V1::Property Create (1.0ms)[0m  [1m[32mINSERT INTO "api_v1_properties" ("address", "rent", "paid", "expenses", "state_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["address", "4096 Caissons Ct, Enola, PA, 17025"], ["rent", 1250], ["paid", 1], ["expenses", 850], ["state_id", 39], ["created_at", "2020-11-20 16:52:20.743622"], ["updated_at", "2020-11-20 16:52:20.743622"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" ORDER BY "api_v1_properties"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-11-20 12:47:09 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/administrator/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/administrator/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 33.3ms | Allocations: 478)
+Completed 200 OK in 99ms (Views: 66.9ms | ActiveRecord: 0.0ms | Allocations: 2617)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-11-20 12:47:09 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/Api/V1/properties" for ::1 at 2020-11-20 12:47:30 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/Api/V1/properties"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/properties" for ::1 at 2020-11-20 12:48:19 -0500
+Processing by Api::V1::PropertiesController#index as HTML
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 21.8ms | ActiveRecord: 1.0ms | Allocations: 8511)
+
+
+Started GET "/api/v1/states" for ::1 at 2020-11-20 12:48:35 -0500
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for Api::V1::StatesController):
+  
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:131:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/states" for ::1 at 2020-11-20 12:49:42 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::StatesController#index as HTML
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states"[0m
+  ↳ app/controllers/api/v1/states_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 8.7ms | ActiveRecord: 1.3ms | Allocations: 13634)
+
+
+Started GET "/api/v1/states" for ::1 at 2020-11-20 14:25:55 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/mnt/c/Users/Vedran.ABEL/dev/flatiron/projects/REview/renew-api/app/controllers/api/v1/states_controller.rb:4: syntax error, unexpected ',', expecting ')'
+... @states, except: (:created_at, :updated_at)
+...                              ^):
+  
+app/controllers/api/v1/states_controller.rb:4: syntax error, unexpected ',', expecting ')'
+app/controllers/api/v1/states_controller.rb:4: syntax error, unexpected ',', expecting ')'
+Started GET "/api/v1/states" for ::1 at 2020-11-20 14:27:44 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::StatesController#index as HTML
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states"[0m
+  ↳ app/controllers/api/v1/states_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 1.0ms | Allocations: 11477)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-20 14:27:58 -0500
+Processing by Api::V1::PropertiesController#index as HTML
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.9ms | Allocations: 7289)
+
+
+Started GET "/api/v1/states" for ::1 at 2020-11-20 14:28:27 -0500
+Processing by Api::V1::StatesController#index as HTML
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states"[0m
+  ↳ app/controllers/api/v1/states_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.3ms | Allocations: 6440)
+
+
+Started GET "/review-frontend" for ::1 at 2020-11-20 18:28:56 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/review-frontend"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/properties" for ::1 at 2020-11-20 18:39:05 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/properties"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/properties" for ::1 at 2020-11-20 18:39:13 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/properties"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/properties" for ::1 at 2020-11-20 18:39:43 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/properties"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/properties" for ::1 at 2020-11-20 18:40:41 -0500
+Processing by Api::V1::PropertiesController#index as HTML
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 948)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-20 18:41:15 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 925)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-20 18:54:10 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 960)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-20 18:54:47 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 924)
+
+
