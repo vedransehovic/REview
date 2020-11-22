@@ -55,4 +55,5 @@
 # Api::V1::State.create(name: "Wisconsin", abbreviation: "WV")
 # Api::V1::State.create(name: "Wyoming", abbreviation: "WI")
 
-Api::V1::Property.create(address: "4096 Caissons Ct, Enola, PA, 17025", rent: 1250, paid: true, expenses: 850, state_id: 39)
+# Api::V1::Property.create(address: "4096 Caissons Ct, Enola, PA, 17025", rent: 1250, paid: true, expenses: 850, state_id: 39)
+Api::V1::Property.create(address: "22-35 75th Street, East Elmhurst, NY, 11370", rent: 2200, paid: true, expenses: 675, state_id: 33)
