@@ -11,6 +11,10 @@ class PropertyCard {
         );
     };
 
+    getStates(){
+        
+    }
+
     renderProperty(){
         propertyCollectionDiv.innerHTML +=
         `
