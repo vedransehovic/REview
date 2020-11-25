@@ -2,18 +2,19 @@ class PropertyCard {
     constructor(property) {
         this.property = property;
         this.renderProperty();
-        console.log(this);
+        PropertyCard.all.push(this);
     }
+
+    static all = []
 
     static getAll() {
-        api.getAllProperties().then((data) => 
+        api.getAllProperties().then((data) => {
             data.forEach((property) => new PropertyCard(property))
+            new StateDropdown();
+        }
+            
         );
     };
-
-    getStates(){
-        
-    }
 
     renderProperty(){
         propertyCollectionDiv.innerHTML +=
