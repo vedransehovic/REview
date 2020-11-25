@@ -22,18 +22,15 @@ class StateDropdown {
 
 
     // build individual elements of pulldown (insert them into the pulldown object)
-    
-    renderPulldown(element) {
-        pulldownElement.innerHTML +=
-        `<option value="${element.property.state.abbreviation}">${element.property.state.abbreviation}</option>`;
+    renderPulldown(state) {
+        this.constructor.pulldownElement.innerHTML += `<option value="${state}">${state}</option>`;
     }
-
+    
     // run through the array and call renderPulldown function on each element
     buildPulldown = () => {
-        console.log(this);
-        this.getStates().forEach(function(element) {
-            console.log(this);
-            renderPulldown(element);
-        })
-    }
+        this.getStates().forEach((state) => {
+            this.renderPulldown(state);
+        });
+    };
 }
+
