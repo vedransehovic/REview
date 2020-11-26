@@ -1,6 +1,8 @@
 class StateDropdown {
-    constructor(){
+    constructor(states){
+        this.states = states
         this.buildPulldown()
+        this.attachEventListener()
     }
 
     // select pulldown object by id
@@ -22,15 +24,23 @@ class StateDropdown {
 
 
     // build individual elements of pulldown (insert them into the pulldown object)
-    renderPulldown(state) {
+    renderOption(state) {
         this.constructor.pulldownElement.innerHTML += `<option value="${state}">${state}</option>`;
     }
     
     // run through the array and call renderPulldown function on each element
     buildPulldown = () => {
-        this.getStates().forEach((state) => {
-            this.renderPulldown(state);
+        const select = document.createElement("select")
+        this.select = select
+        this.states.forEach((state) => {
+           this.select.innerHTML += this.renderOption(state);
         });
     };
+
+     attachEventListener() {
+        this.select.addEventListener("change", this.somefunction) 
+    }
+
+    
 }
 
