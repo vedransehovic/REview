@@ -2132,3 +2132,581 @@ Processing by Api::V1::PropertiesController#index as */*
 Completed 200 OK in 37ms (Views: 33.8ms | ActiveRecord: 0.9ms | Allocations: 15354)
 
 
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 16:44:42 -0500
+  [1m[35m (11.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 134ms (Views: 103.0ms | ActiveRecord: 2.0ms | Allocations: 18521)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 16:52:39 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.8ms | Allocations: 4474)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 18:41:53 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.7ms | Allocations: 15306)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 18:42:41 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.7ms | Allocations: 4437)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 18:45:28 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.8ms | Allocations: 4437)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 18:47:27 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.8ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 18:54:07 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.4ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.9ms | Allocations: 4461)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 18:54:44 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.7ms | Allocations: 4419)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 18:57:24 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.9ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 18:57:39 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.4ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.8ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 18:57:43 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.4ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.8ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 18:57:59 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.4ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 0.9ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 19:02:56 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.8ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 19:03:22 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.8ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 19:03:36 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.7ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 19:04:05 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.7ms | Allocations: 4421)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 19:04:35 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.7ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 19:05:49 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.9ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 19:07:05 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.7ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 19:09:39 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.5ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 1.1ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 19:10:28 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.4ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.8ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 19:10:50 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.4ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.8ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 19:10:51 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.7ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 19:11:31 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.4ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 1.0ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:33:46 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 0.8ms | Allocations: 15289)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:35:43 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.8ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:36:53 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.8ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:37:52 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.8ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:38:59 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.8ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:40:36 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.8ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:41:24 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.7ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:41:50 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.7ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:42:37 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.5ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 1.0ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:42:47 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.4ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.8ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:43:00 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.7ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:43:59 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.7ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:48:14 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.4ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.8ms | Allocations: 4421)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:49:20 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.8ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:50:53 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.7ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:51:23 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.4ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.8ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:52:59 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.8ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:53:19 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.6ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.4ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 1.2ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:53:31 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.4ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.9ms | Allocations: 4418)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-11-26 20:56:13 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.8ms | Allocations: 4418)
+
+

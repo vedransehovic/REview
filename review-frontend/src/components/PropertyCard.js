@@ -4,9 +4,10 @@ class PropertyCard {
         this.renderProperty();
         PropertyCard.all.push(this);
     }
-
+    //this array will contain all properties
     static all = []
 
+    //gets all "fetched" properties and generates "card" for each one. After that it initates buidling of a dropdown menu.
     static getAll() {
         api.getAllProperties().then((data) => {
             data.forEach((property) => new PropertyCard(property))
@@ -17,6 +18,7 @@ class PropertyCard {
         );
     };
 
+    //renders list of properties by state chosen.
     static renderByState(abbr){
         propertyCollectionDiv.innerHTML = ""
         this.all.map(propertyCard => {
@@ -26,6 +28,7 @@ class PropertyCard {
         })
     }
 
+    //generates list of states that will be source for the pulldown menu
     static generateStateList(){
         let stateList = [];
         for (const propertyCard of this.all) {
@@ -36,6 +39,7 @@ class PropertyCard {
         return stateList;
     }
 
+    //renders property card
     renderProperty(){
         propertyCollectionDiv.innerHTML +=
         `
