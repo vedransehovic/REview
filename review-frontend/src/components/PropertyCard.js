@@ -10,6 +10,7 @@ class PropertyCard {
     //this array will contain all properties
     static all = []
 
+    //attaching event listener and corresponding function
     attachEventListener() {
         this.card.addEventListener('click', this.handleOnClick);
     }
@@ -17,12 +18,16 @@ class PropertyCard {
     handleOnClick = (event) => {
         if (event.target.className == "edit") {
             console.log(this.card)
-            debugger
         } else if (event.target.id == "paid"){
-            //update the database (fetch update request)
-            this.card.children[1].style.backgroundColor = "#ccffcc" ;
-            this.card.children[1].children[1].children[0].innerHTML = '✔';
+            const id = this.card.dataset.id
+            //update the database (fetch update request) - call api function
+            api.updatePaid(id).then(property => this.updatePaidHTML());
         }
+    }
+
+    updatePaidHTML(updateValue) {
+        this.card.children[1].style.backgroundColor = "#ccffcc" ; //color the bottom part of the card green
+        this.card.children[1].children[1].children[0].innerHTML = '✔'; //replace text with checkmark
     }
 
     //renders list of properties by state chosen.
@@ -51,9 +56,26 @@ class PropertyCard {
         const card = document.createElement('div');
         card.className = "card";
         card.dataset.id = this.property.id;
+        card.id = this.property.id;
         this.card = card;
         this.renderInnerHTML()
         this.constructor.container.append(card)
+    }
+
+    renderPaid(){
+        const paid = this.property.paid;
+        if (paid === true) {
+            return '✔'
+        } else {
+            // debugger
+            // this.card.children[1].children[1].children[0].innerHTML =             
+            
+            return `
+            <input type="checkbox" id="paid" name="paid" value="true">
+            <label for="paid"> Mark as paid</label>
+            `
+    
+        }
     }
 
     renderInnerHTML() {
@@ -63,8 +85,9 @@ class PropertyCard {
         <div class="cardcontainer">
           <b>${this.property.address}</b>
           <p>Rent: ${this.property.rent} 
-          <span class="paid"><input type="checkbox" id="paid" name="paid" value="true">
-          <label for="paid"> Mark as paid</label></span><br>
+          <span class="paid">
+                ${this.renderPaid()}
+          </span><br>
           Expenses: ${this.property.expenses}<br>
           </p> 
           <button type="button" class="edit">Edit Property</button>
