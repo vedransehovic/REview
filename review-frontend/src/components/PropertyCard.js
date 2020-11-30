@@ -65,6 +65,7 @@ class PropertyCard {
     renderPaid(){
         const paid = this.property.paid;
         if (paid === true) {
+           this.card.classList.add('green-background');
             return '✔'
         } else {
             // debugger
