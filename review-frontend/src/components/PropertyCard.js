@@ -17,7 +17,12 @@ class PropertyCard {
 
     handleOnClick = (event) => {
         if (event.target.className == "edit") {
-            console.log(this.card)
+            const photo = this.property.photo;
+            const address = this.property.address;
+            const paid = this.property.paid;
+            const rent = this.property.rent;
+            const expenses = this.property.expenses;
+            new FormModal(photo, address, rent, expenses, paid);
         } else if (event.target.id == "paid"){
             const id = this.card.dataset.id
             //update the database (fetch update request) - call api function
