@@ -41,6 +41,7 @@ class PropertyCard {
         this.all.map(propertyCard => {
             if(propertyCard.property.state.abbreviation === abbr ){
                 propertyCard.render()
+                propertyCard.attachEventListener();
             }
         })
     }

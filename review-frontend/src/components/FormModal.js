@@ -16,9 +16,28 @@ class FormModal {
         this.generateModalForm();
         this.constructor.modal.style.display = "block";
         const button = document.getElementById("button-modal")
-        button.addEventListener("click", function(){
-            console.log('Hello World')
-        });
+        button.addEventListener("click", this.handleData);
+    }
+
+    handleData = () => {
+        const formData = new FormData(document.getElementById('modal-form'));
+        debugger
+        console.log(formData);
+
+        // const address = document.getElementById('address');
+        // const image = document.getElementById('image');
+        // const rent = document.getElementById('rent');
+        // const expenses = document.getElementById('expenses');
+        // const paid = document.getElementById('paid');
+
+        // const data = {
+        //     address: address.value,
+        //     image: image.value,
+        //     rent: rent.value,
+        //     expenses: expenses.value,
+        //     paid: paid.value,
+        //     flag: "set"
+        // }
     }
 
     closeModal = () => {
@@ -35,7 +54,7 @@ class FormModal {
         this.constructor.modal.querySelector('.form').innerHTML = 
         `
         <h1>EDIT PROPERTY</h1>
-        <form>
+        <form id="modal-form">
             <label for="image">Image: </label>
             <input type="text" id="image" name="image" value="${this.photo}">
             <br><br>
