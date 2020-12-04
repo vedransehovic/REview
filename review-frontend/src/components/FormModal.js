@@ -2,7 +2,8 @@ class FormModal {
     static modal = document.getElementById("myModal");
     static closeBtn = document.getElementsByClassName("close")[0];
 
-    constructor(photo, address, rent, expenses, paid) {
+    constructor(id, photo, address, rent, expenses, paid) {
+        this.id = id;
         this.photo = photo;
         this.address = address;
         this.rent = rent;
@@ -16,13 +17,19 @@ class FormModal {
         this.generateModalForm();
         this.constructor.modal.style.display = "block";
         const button = document.getElementById("button-modal")
-        button.addEventListener("click", this.handleData);
+        button.addEventListener("click", () => this.handleData());
     }
 
     handleData = () => {
-        const formData = new FormData(document.getElementById('modal-form'));
-        debugger
-        console.log(formData);
+        // const formData = new FormData(document.getElementById('modal-form'));
+        // debugger
+        // console.log(formData);
+        const form = document.getElementById('modal-form');
+        const formInfo = new FormData(form);
+        api.updateForm(this.id, formInfo).then((data) => console.log(data))
+
+
+
 
         // const address = document.getElementById('address');
         // const image = document.getElementById('image');
