@@ -26,8 +26,9 @@ class FormModal {
         // console.log(formData);
         const form = document.getElementById('modal-form');
         const formInfo = new FormData(form);
-        api.updateForm(this.id, formInfo).then((data) => console.log(data))
-
+        formInfo.append('flag', 'true');
+        api.updateForm(this.id, formInfo).then((data) => this.handleResponse(data));
+        this.closeModal();
 
 
 
@@ -45,6 +46,47 @@ class FormModal {
         //     paid: paid.value,
         //     flag: "set"
         // }
+    }
+
+    handleResponse = (data) => {
+        const property = data;
+        const card = document.getElementById(`${property.id}`);
+        this.renderInnerHTML(card, property);
+    }
+
+    renderInnerHTML(card, property) {
+        
+        card.innerHTML =
+        `
+        <img src="${property.photo}" alt="Avatar" style="width:100%">
+        <div class="cardcontainer">
+          <b>${property.address}</b>
+          <p>Rent: ${property.rent} 
+          <span class="paid">
+                ${this.renderPaid(card, property)}
+          </span><br>
+          Expenses: ${property.expenses}<br>
+          </p> 
+          <button type="button" class="edit">Edit Property</button>
+        </div>
+        `
+    }
+
+    renderPaid(card, property){
+        const paid = property.paid;
+        if (paid === true) {
+           card.classList.add('green-background');
+            return '✔'
+        } else {
+            // debugger
+            // this.card.children[1].children[1].children[0].innerHTML =             
+            card.classList.remove('green-background');
+            return `
+            <input type="checkbox" id="paid" name="paid" value="true">
+            <label for="paid"> Mark as paid</label>
+            `
+    
+        }
     }
 
     closeModal = () => {

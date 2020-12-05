@@ -6382,3 +6382,962 @@ Processing by Api::V1::PropertiesController#update as */*
 Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 4427)
 
 
+Started GET "/api/v1/properties" for ::1 at 2020-12-04 13:39:09 -0500
+  [1m[35m (9.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 141ms (Views: 106.0ms | ActiveRecord: 2.3ms | Allocations: 18517)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-04 13:39:15 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:9:in `update'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:9:in `update'
+  [1m[36mApi::V1::Property Update (7.0ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "paid" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["paid", 1], ["updated_at", "2020-12-04 18:39:15.726739"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:9:in `update'
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:9:in `update'
+Completed 200 OK in 56ms (Views: 0.9ms | ActiveRecord: 14.1ms | Allocations: 10618)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-04 13:39:21 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35 75th Street, East Elmhurst, NY, 11370", "rent"=>"2200", "expenses"=>"675", "paid"=>"false", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:9:in `update'
+  [1m[36mApi::V1::State Load (0.1ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:9:in `update'
+  [1m[36mApi::V1::Property Update (0.6ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "paid" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["paid", 0], ["updated_at", "2020-12-04 18:39:21.375450"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:9:in `update'
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:9:in `update'
+Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 5.6ms | Allocations: 10832)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-04 13:39:30 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.7ms | Allocations: 4437)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-04 14:09:17 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.7ms | Allocations: 15302)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-04 14:09:38 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35 75th Street, East Elmhurst, NY, 11370", "rent"=>"5000", "expenses"=>"675", "paid"=>"false", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ (byebug):1:in `update'
+Completed 500 Internal Server Error in 671296ms (ActiveRecord: 0.3ms | Allocations: 206749)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `update'
+app/controllers/api/v1/properties_controller.rb:9:in `update'
+Started GET "/api/v1/properties" for ::1 at 2020-12-04 14:20:49 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.9ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.8ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.9ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 267ms (Views: 234.3ms | ActiveRecord: 16.8ms | Allocations: 3284212)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-04 14:20:57 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35 75th Street, East Elmhurst, NY, 11370", "rent"=>"2200", "expenses"=>"675", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.9ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:9:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (byebug):1:in `update'
+  [1m[36mApi::V1::State Load (0.1ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ (byebug):1:in `update'
+  [1m[36mApi::V1::Property Update (0.8ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "paid" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["paid", 1], ["updated_at", "2020-12-04 19:37:08.738683"], ["id", 3]]
+  ↳ (byebug):1:in `update'
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (byebug):1:in `update'
+Completed 500 Internal Server Error in 1633426ms (ActiveRecord: 17.0ms | Allocations: 2596646)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `update'
+app/controllers/api/v1/properties_controller.rb:17:in `update'
+Started GET "/api/v1/properties" for ::1 at 2020-12-04 14:48:39 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 33ms (Views: 28.0ms | ActiveRecord: 2.2ms | Allocations: 18512)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-04 14:49:08 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35 75th Street, East Elmhurst, NY, 11370", "rent"=>"5000", "expenses"=>"1000", "paid"=>"true", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:9:in `update'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms | Allocations: 986)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'image' for Api::V1::Property.):
+  
+app/controllers/api/v1/properties_controller.rb:12:in `update'
+Started GET "/api/v1/properties" for ::1 at 2020-12-04 14:50:51 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 37ms (Views: 31.3ms | ActiveRecord: 3.5ms | Allocations: 16037)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-04 14:51:07 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"IS THIS WORKING", "rent"=>"2200", "expenses"=>"675", "paid"=>"true", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:9:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+  [1m[36mApi::V1::Property Update (6.8ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "address" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["address", "IS THIS WORKING"], ["updated_at", "2020-12-04 19:51:07.292334"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+Completed 200 OK in 32ms (Views: 0.3ms | ActiveRecord: 12.2ms | Allocations: 8928)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-04 14:51:42 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.8ms | Allocations: 4435)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-04 14:52:56 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/c942bdbc0fe4b86cb804c87b8a2e8430l-m3765835347od-w1024_h768.jpg", "address"=>"IS THIS WORKING", "rent"=>"2200", "expenses"=>"675", "paid"=>"true", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:9:in `update'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.0ms | Allocations: 7594)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'image' for Api::V1::Property.):
+  
+app/controllers/api/v1/properties_controller.rb:12:in `update'
+Started GET "/api/v1/properties" for ::1 at 2020-12-04 14:53:21 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 2.3ms | Allocations: 16017)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-04 14:53:26 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"IS THIS WORKING", "rent"=>"2200", "expenses"=>"675", "paid"=>"true", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:9:in `update'
+Completed 500 Internal Server Error in 62824ms (ActiveRecord: 0.3ms | Allocations: 125831)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-04 14:54:29 -0500
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `update'
+app/controllers/api/v1/properties_controller.rb:12:in `update'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (1.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.8ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.1ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.8ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 265ms (Views: 231.4ms | ActiveRecord: 14.9ms | Allocations: 3284157)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-04 14:54:59 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"5000", "expenses"=>"1000", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.9ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:9:in `update'
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+  [1m[36mApi::V1::State Load (0.7ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+  [1m[36mApi::V1::Property Update (9.6ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "address" = ?, "paid" = ?, "rent" = ?, "expenses" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["address", "22-35, 75th Street"], ["paid", nil], ["rent", 5000], ["expenses", 1000], ["updated_at", "2020-12-04 19:55:00.495017"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+Completed 200 OK in 311ms (Views: 10.0ms | ActiveRecord: 30.3ms | Allocations: 3912205)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-04 14:55:07 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (1.0ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (4.5ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (2.5ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.9ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 135ms (Views: 125.0ms | ActiveRecord: 8.9ms | Allocations: 1414202)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-04 14:55:13 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::V1::Property Load (3.6ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:9:in `update'
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:14:in `update'
+  [1m[36mApi::V1::State Load (2.1ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:14:in `update'
+  [1m[36mApi::V1::Property Update (1.4ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "paid" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["paid", 1], ["updated_at", "2020-12-04 19:55:13.721049"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:14:in `update'
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:14:in `update'
+Completed 200 OK in 189ms (Views: 10.4ms | ActiveRecord: 12.9ms | Allocations: 1825974)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-04 14:55:21 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (1.1ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.9ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.8ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 145ms (Views: 141.0ms | ActiveRecord: 3.0ms | Allocations: 1521855)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-04 14:58:34 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (1.1ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (3.1ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.9ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 361ms (Views: 316.8ms | ActiveRecord: 25.5ms | Allocations: 4833989)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-04 14:58:45 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"5000", "expenses"=>"1000", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (3.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (1.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (8.3ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "paid" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["paid", nil], ["updated_at", "2020-12-04 19:58:45.774950"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 198ms (Views: 11.2ms | ActiveRecord: 18.9ms | Allocations: 2134792)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-04 14:59:33 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (4.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (1.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.9ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 171ms (Views: 162.3ms | ActiveRecord: 6.6ms | Allocations: 1745358)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-04 14:59:43 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"5000", "expenses"=>"1000", "paid"=>"null", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.9ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (1.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (1.5ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "paid" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["paid", 1], ["updated_at", "2020-12-04 19:59:43.975027"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 217ms (Views: 8.7ms | ActiveRecord: 12.2ms | Allocations: 2025908)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-04 14:59:46 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (1.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.8ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.8ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (1.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 134ms (Views: 126.4ms | ActiveRecord: 4.1ms | Allocations: 1745961)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-04 15:00:01 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"5000", "expenses"=>"1000", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (3.0ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (1.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (7.6ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "paid" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["paid", nil], ["updated_at", "2020-12-04 20:00:01.956458"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 167ms (Views: 10.7ms | ActiveRecord: 16.8ms | Allocations: 2126032)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-04 15:00:07 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"5000", "expenses"=>"1000", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.8ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (1.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 99ms (Views: 10.9ms | ActiveRecord: 2.7ms | Allocations: 1365486)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-04 15:03:45 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.9ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.9ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.9ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 138ms (Views: 133.7ms | ActiveRecord: 2.8ms | Allocations: 1745356)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-04 15:03:54 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"5000", "expenses"=>"1000", "paid"=>"null", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.8ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (1.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (7.5ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "paid" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["paid", 1], ["updated_at", "2020-12-04 20:03:54.781229"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 152ms (Views: 10.6ms | ActiveRecord: 14.6ms | Allocations: 2041031)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-04 15:04:47 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.9ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.9ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (3.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 145ms (Views: 137.9ms | ActiveRecord: 5.3ms | Allocations: 1745961)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-04 15:04:51 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"5000", "expenses"=>"1000", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.9ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (1.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (2.2ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "paid" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["paid", nil], ["updated_at", "2020-12-04 20:04:51.581341"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 167ms (Views: 10.9ms | ActiveRecord: 9.5ms | Allocations: 2204938)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-04 15:12:35 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (4.4ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (1.1ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.9ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 139ms (Views: 126.2ms | ActiveRecord: 6.6ms | Allocations: 1756213)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-04 15:12:42 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"5000", "expenses"=>"1000", "paid"=>"null", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (1.1ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (1.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (9.8ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "paid" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["paid", 1], ["updated_at", "2020-12-04 20:12:42.386053"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 156ms (Views: 11.5ms | ActiveRecord: 17.5ms | Allocations: 1935617)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-04 15:25:10 -0500
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (1.6ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (1.1ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (3.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 147ms (Views: 137.1ms | ActiveRecord: 6.3ms | Allocations: 1756820)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-04 15:25:16 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"5000", "expenses"=>"1000", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (1.1ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (1.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (8.3ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "paid" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["paid", nil], ["updated_at", "2020-12-04 20:25:16.697623"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 162ms (Views: 10.2ms | ActiveRecord: 16.3ms | Allocations: 2046954)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-05 13:08:33 -0500
+  [1m[35m (9.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 143ms (Views: 107.3ms | ActiveRecord: 2.1ms | Allocations: 18507)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-05 13:08:36 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+  [1m[36mApi::V1::Property Update (6.8ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "paid" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["paid", 1], ["updated_at", "2020-12-05 18:08:36.949648"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+Completed 200 OK in 43ms (Views: 0.4ms | ActiveRecord: 12.4ms | Allocations: 10619)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-05 13:09:04 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"5000", "expenses"=>"1000", "paid"=>"null", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 26ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 3667)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-05 13:16:46 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.4ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.8ms | Allocations: 4472)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-05 13:16:57 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"2500", "expenses"=>"500", "paid"=>"true", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (0.7ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "rent" = ?, "expenses" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["rent", 2500], ["expenses", 500], ["updated_at", "2020-12-05 18:16:57.776462"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 32ms (Views: 0.4ms | ActiveRecord: 6.5ms | Allocations: 10291)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-05 13:18:28 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.4ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.9ms | Allocations: 4416)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-05 13:18:38 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"5000", "expenses"=>"500", "paid"=>"true", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (7.4ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "rent" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["rent", 5000], ["updated_at", "2020-12-05 18:18:38.181443"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 33ms (Views: 0.4ms | ActiveRecord: 12.8ms | Allocations: 10229)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-05 13:19:26 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.7ms | Allocations: 4417)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-05 13:19:58 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"5000", "expenses"=>"1000", "paid"=>"true", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (7.4ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "expenses" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["expenses", 1000], ["updated_at", "2020-12-05 18:19:58.383073"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 42ms (Views: 0.3ms | ActiveRecord: 13.4ms | Allocations: 10235)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-05 13:20:33 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.7ms | Allocations: 4416)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-05 13:20:39 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"3000", "expenses"=>"1000", "paid"=>"true", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (0.1ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (7.4ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "rent" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["rent", 3000], ["updated_at", "2020-12-05 18:20:39.541082"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 21ms (Views: 0.3ms | ActiveRecord: 12.8ms | Allocations: 8575)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-05 13:21:44 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.9ms | Allocations: 4416)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-05 13:21:53 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"2500", "expenses"=>"1000", "paid"=>"true", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (7.5ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "rent" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["rent", 2500], ["updated_at", "2020-12-05 18:21:53.134218"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 33ms (Views: 0.4ms | ActiveRecord: 12.5ms | Allocations: 11089)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-05 13:22:34 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.7ms | Allocations: 4416)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-05 13:22:43 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"1250", "expenses"=>"1000", "paid"=>"true", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (0.7ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "rent" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["rent", 1250], ["updated_at", "2020-12-05 18:22:43.430880"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 25ms (Views: 0.4ms | ActiveRecord: 7.1ms | Allocations: 10228)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-05 13:23:34 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.7ms | Allocations: 4416)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-05 13:23:45 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"1500", "expenses"=>"1000", "paid"=>"true", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (6.8ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "rent" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["rent", 1500], ["updated_at", "2020-12-05 18:23:45.534937"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 34ms (Views: 0.4ms | ActiveRecord: 12.4ms | Allocations: 8527)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-05 13:23:55 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"5000", "expenses"=>"1000", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (7.7ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "paid" = ?, "rent" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["paid", nil], ["rent", 5000], ["updated_at", "2020-12-05 18:23:55.261402"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 12.7ms | Allocations: 9632)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-05 13:24:03 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+  [1m[36mApi::V1::Property Update (7.7ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "paid" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["paid", 1], ["updated_at", "2020-12-05 18:24:03.937630"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+Completed 200 OK in 28ms (Views: 0.4ms | ActiveRecord: 12.5ms | Allocations: 9260)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-05 13:24:08 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"1250", "expenses"=>"1000", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (7.3ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "paid" = ?, "rent" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["paid", nil], ["rent", 1250], ["updated_at", "2020-12-05 18:24:08.813101"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 29ms (Views: 0.3ms | ActiveRecord: 12.2ms | Allocations: 10062)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-05 13:24:27 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.4ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.8ms | Allocations: 4416)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-05 13:24:40 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"1500", "expenses"=>"1000", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (7.8ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "rent" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["rent", 1500], ["updated_at", "2020-12-05 18:24:40.797972"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 38ms (Views: 0.4ms | ActiveRecord: 13.0ms | Allocations: 10021)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-05 13:24:49 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"1250", "expenses"=>"1000", "paid"=>"null", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (0.7ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "paid" = ?, "rent" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["paid", 1], ["rent", 1250], ["updated_at", "2020-12-05 18:24:49.165718"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 22ms (Views: 0.4ms | ActiveRecord: 6.2ms | Allocations: 10868)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-05 13:25:04 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"1250", "expenses"=>"1000", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (0.7ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "paid" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["paid", nil], ["updated_at", "2020-12-05 18:25:04.045268"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 5.4ms | Allocations: 8290)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-05 13:28:45 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"2500", "expenses"=>"2000", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::Property Update (1.1ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "rent" = ?, "expenses" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["rent", 2500], ["expenses", 2000], ["updated_at", "2020-12-05 18:28:45.136829"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 25ms (Views: 0.4ms | ActiveRecord: 6.9ms | Allocations: 10241)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-05 13:29:07 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.7ms | Allocations: 4416)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-05 13:29:09 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+  [1m[36mApi::V1::Property Update (7.5ms)[0m  [1m[33mUPDATE "api_v1_properties" SET "paid" = ?, "updated_at" = ? WHERE "api_v1_properties"."id" = ?[0m  [["paid", 1], ["updated_at", "2020-12-05 18:29:09.057574"], ["id", 3]]
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:12:in `update'
+Completed 200 OK in 33ms (Views: 0.4ms | ActiveRecord: 12.2ms | Allocations: 10826)
+
+
+Started PATCH "/api/v1/properties/3" for ::1 at 2020-12-05 13:29:19 -0500
+Processing by Api::V1::PropertiesController#update as */*
+  Parameters: {"image"=>"https://ap.rdcpix.com/cd7a24fc831d7fa162fce9659ce37a24l-w2532647074od-w1024_h768.jpg", "address"=>"22-35, 75th Street", "rent"=>"2500", "expenses"=>"2000", "paid"=>"null", "flag"=>"true", "id"=>"3"}
+  [1m[36mApi::V1::Property Load (0.2ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties" WHERE "api_v1_properties"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:8:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:10:in `update'
+Completed 200 OK in 30ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 3645)
+
+
+Started GET "/api/v1/properties" for ::1 at 2020-12-05 13:29:22 -0500
+Processing by Api::V1::PropertiesController#index as */*
+  [1m[36mApi::V1::Property Load (0.3ms)[0m  [1m[34mSELECT "api_v1_properties".* FROM "api_v1_properties"[0m
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.3ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mCACHE Api::V1::State Load (0.0ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 39], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+  [1m[36mApi::V1::State Load (0.2ms)[0m  [1m[34mSELECT "api_v1_states".* FROM "api_v1_states" WHERE "api_v1_states"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/properties_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.8ms | Allocations: 4416)
+
+
