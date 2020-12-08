@@ -86,6 +86,22 @@ class PropertyCard {
         }
     }
 
+    static updateCard(id, formInfo){
+        api.updateForm(id, formInfo).then((data) => this.handleResponse(data));
+
+    }
+
+    static handleResponse = (data) => {
+        const propertyCard = this.findById(data.id)
+        propertyCard.property = data;
+        propertyCard.renderInnerHTML();
+    }
+
+    static findById(id) {
+       return this.all.find((propertyCard) => propertyCard.property.id === id )
+    }
+
+
     renderInnerHTML() {
         this.card.innerHTML =
         `
@@ -109,6 +125,7 @@ class PropertyCard {
                 data.forEach((property) => new PropertyCard(property))
                 const states = this.generateStateList()
                 new StateDropdown(states);
+                //debugger
             }
                 
             );
