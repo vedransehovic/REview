@@ -75,9 +75,7 @@ class PropertyCard {
            this.card.classList.add('green-background');
             return '✔'
         } else {
-            // debugger
-            // this.card.children[1].children[1].children[0].innerHTML =             
-            
+            this.card.classList.remove('green-background');
             return `
             <input type="checkbox" id="paid" name="paid" value="true">
             <label for="paid"> Mark as paid</label>
